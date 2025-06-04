@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<head>
+<style>
+    .cart-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgb(34, 168, 34);
+      padding: 10px 15px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 18px;
+       z-index: 1000;
+     
+    }
+    .badge {
+      background-color: rgb(104, 134, 226);
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 30;
+    }
+    h1{
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      font-size: 200;
+      color:rgb(8, 122, 23);
+      
+    }
+    header{
+  background-color: black;
+}
+header .navbar{
+  display: flex;
+  padding-top: 50px;
+  padding-bottom:50px;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .nav-logo .logo-text{
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+.navbar .nav-menu{
+  display: flex;
+  gap:10px;
+}
+
+.navbar .nav-menu .nav-link{
+  padding:10px 20px;
+  font-size: 20px;
+  color: black;
+  border-radius: 30px;
+  transition: 0.3s ease;
+
+}
+.navbar .nav-menu .nav-link:hover{
+  color:rgb(156, 223, 156);
+   background-color: rgb(6, 119, 6);
+}
+
+
+.navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  opacity: 0.85;
+  height: 50px;
+  z-index: 12;
+}
+    .showcase-area {
+  height: 50vh;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.144),
+      rgba(255, 255, 255, 0.336)
+    ),
+    url("./images/pexels-igor-starkov-233202-1307698.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 50px;
+}
+  
+  </style>
+  </head>
+<body>
+</head>
+<body>
+    <header>
+      
+<nav class="navbar">
+  <a href="resweb.html" class="nav-logo">
+    <h2 class="logo-text">Cafe For You</h2>
+  </a>
+  <ul class="nav-menu">
+    <li class="nav-item"><a href="resweb.html" class="nav-link">Home</a></li>
+    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+    <li class="nav-item"><a href="desserts.html" class="nav-link">Food Category</a></li>
+    <li class="nav-item"><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+    <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+</nav>
+
+    </header>
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home">Eat healthy & delicious Food</h1>
+            <p>Eat Healty, it is good for our health.</p>
+
+        </div>
+    </section>
+
+  <!-- Cart Icon -->
+<div class="cart-icon">
+  <i class="fa-solid fa-cart-shopping"></i> <span class="badge" id="cart-count">0</span>
+</div>
+
+<!-- Container -->
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Sri-Lankan Cuisine</h1>
+
+  <!-- Search Bar -->
+  <div class="row mb-4">
+    <div class="col-md-6 offset-md-3">
+      <input type="text" id="searchBar" class="form-control" placeholder="Search Sri-Lankan cuisine...">
+    </div>
+  </div>
+
+  <!-- Dessert Items -->
+  <div class="row" id="dessert-menu">
+
+    <!-- Dessert Item Template -->
+    <div class="col-md-4 dessert-card" data-name="Chocolate Cake">
+      <div class="card">
+        <img src="./sri lankan foods/Traditional Kiribath (Sri Lankan Milk Rice).jpeg" width="50%" alt="Chocolate Cake">
+        <div class="card-body">
+          <h5 class="card-title">Chocolate Cake</h5>
+          <p class="card-text">Price: Rs.240.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Chocolate Cake" data-price="240.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 dessert-card" data-name="Vanilla Cake">
+      <div class="card">
+        <img src="./images/Deliciously Simple Vanilla Cake Recipe.jpeg" width="50%" alt="Vanilla Cake">
+        <div class="card-body">
+          <h5 class="card-title">Vanilla Cake</h5>
+          <p class="card-text">Price: Rs.230.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Vanilla Cake" data-price="230.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 dessert-card" data-name="Cheese Cake">
+      <div class="card">
+        <img src="./images/Copycat Cheesecake Factory Cheesecake Recipe - TremBom.jpeg" width="62%" alt="Cheese Cake">
+        <div class="card-body">
+          <h5 class="card-title">Cheese Cake</h5>
+          <p class="card-text">Price: Rs.360.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Cheese Cake" data-price="360.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 dessert-card" data-name="Red Velvet Cup Cake">
+      <div class="card">
+        <img src="./images/red velvet cup cake.jpeg" width="50%" alt="Red Velvet Cup Cake">
+        <div class="card-body">
+          <h5 class="card-title">Red Velvet Cup Cake</h5>
+          <p class="card-text">Price: Rs.400.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Red Velvet Cup Cake" data-price="400.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 dessert-card" data-name="Fruit Cake">
+      <div class="card">
+        <img src="./images/Fruitcake Loaf Cake_ So easy with a rich cream cheese batter base_.jpeg" width="75%" alt="Fruit Cake">
+        <div class="card-body">
+          <h5 class="card-title">Fruit Cake</h5>
+          <p class="card-text">Price: Rs.250.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Fruit Cake" data-price="250.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 dessert-card" data-name="Brwonie">
+      <div class="card">
+        <img src="./images/Best Brownie Recipe for Deliciously Fudgy Treats.jpeg" width="62%" alt="Brwonie">
+        <div class="card-body">
+          <h5 class="card-title">Brwonie</h5>
+          <p class="card-text">Price: Rs.240.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Brwonie" data-price="240.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="col-md-4 dessert-card" data-name="Coffee Donut">
+      <div class="card">
+        <img src="./images/Baked Coffee Doughnuts.jpeg" width="50%" alt="Coffee Donut">
+        <div class="card-body">
+          <h5 class="card-title">Coffee Donut</h5>
+          <p class="card-text">Price: Rs.210.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Coffee Donut" data-price="210.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="col-md-4 dessert-card" data-name="Choco Donut">
+      <div class="card">
+        <img src="./images/Delicious Chocolate Donuts Recipe.jpeg" width="74%" alt="Choco Donut">
+        <div class="card-body">
+          <h5 class="card-title">Choco Donut</h5>
+          <p class="card-text">Price: Rs.220.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Choco Donut" data-price="220.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 dessert-card" data-name="Strawberry Donut">
+      <div class="card">
+        <img src="./images/Strawberry Cheesecake Donuts Recipe.jpeg" width="74%" alt="Strawberry Donut">
+        <div class="card-body">
+          <h5 class="card-title">Strawberry Donut</h5>
+          <p class="card-text">Price: Rs.220.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Strawberry Donut" data-price="220.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 dessert-card" data-name="Watalappan">
+      <div class="card">
+        <img src="./images/Wattalappam (Watalappan) - Romandian Masala.jpeg" width="50%" alt="Watalappan">
+        <div class="card-body">
+          <h5 class="card-title">Watalappan</h5>
+          <p class="card-text">Price: Rs.190.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name=" Watalappan" data-price="190.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 dessert-card" data-name="Choco Ice Cream">
+      <div class="card">
+        <img src="./images/choco icecream.jpeg" width="56%" alt="Choco Ice Cream">
+        <div class="card-body">
+          <h5 class="card-title">Choco Ice Cream</h5>
+          <p class="card-text">Price: Rs.210.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Choco Ice Cream" data-price="210.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 dessert-card" data-name="Vanilla Ice Cream">
+      <div class="card">
+        <img src="./images/10+ Unique Ice Cream Flavor Ideas.jpeg" width="50%" alt="Vanilla Ice Cream">
+        <div class="card-body">
+          <h5 class="card-title">Vanilla Ice Cream</h5>
+          <p class="card-text">Price: Rs.200.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Vanilla Ice Cream" data-price="200.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 dessert-card" data-name="Gulab Jamun">
+      <div class="card">
+        <img src="./images/Gulab Jamun recipe (with Mawa_khoya) - Cooking Carnival.jpeg" width="40%" alt="Gulab Jamun">
+        <div class="card-body">
+          <h5 class="card-title">Gulab Jamun</h5>
+          <p class="card-text">Price: Rs.220.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Gulab Jamun" data-price="220.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="col-md-4 dessert-card" data-name="Caramel Pudding">
+      <div class="card">
+        <img src="./images/Creme_caramel_custard_pudding_caramel_custard_Recipe_shutterstock_170464598_400.jpg" width="90%" alt="Caramel Pudding">
+        <div class="card-body">
+          <h5 class="card-title">Caramel Pudding</h5>
+          <p class="card-text">Price: Rs.200.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Caramel Pudding" data-price="200.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 dessert-card" data-name="Carot Halwa">
+      <div class="card">
+        <img src="./images/Carrot Halwa Recipe - How To Make The Best Gajar Ka Halwa at Home.jpeg" width="40%" alt="Carot Halwa">
+        <div class="card-body">
+          <h5 class="card-title">Carot Halwa</h5>
+          <p class="card-text">Price: Rs.190.00</p>
+          <div class="input-group">
+            <input type="number" class="form-control quantity-input" value="1" min="1">
+            <button class="btn btn-primary add-to-cart" data-name="Carot Halwa" data-price="190.00">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+<!-- JS for Cart and Search -->
+<script>
+  let cartCount = 0;
+
+  // Handle Add to Cart
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function () {
+      const quantityInput = this.parentElement.querySelector('.quantity-input');
+      const quantity = parseInt(quantityInput.value);
+      const name = this.dataset.name;
+      const price = parseFloat(this.dataset.price);
+
+      cartCount += quantity;
+      document.getElementById('cart-count').textContent = cartCount;
+
+      alert(`${quantity} x ${name} added to cart ($${(price * quantity).toFixed(2)})`);
+    });
+  });
+
+  // Handle Search Filter
+  document.getElementById('searchBar').addEventListener('keyup', function () {
+    const query = this.value.toLowerCase();
+    const desserts = document.querySelectorAll('.dessert-card');
+
+    desserts.forEach(card => {
+      const name = card.dataset.name.toLowerCase();
+      card.style.display = name.includes(query) ? 'block' : 'none';
+    });
+  });
+</script>
+  
+</body>
+</html>
